@@ -18,12 +18,13 @@ st.title("📊 Kent Police Predictive Crime Dashboard")
 # LOAD AND CLEAN DATA
 # -----------------------------------
 @st.cache_data
+@st.cache_data
 def load_data():
-    file_id = "1Nyfy70k-_cYJhMRGjIXoVA_na2iTsOYK"
-gdown.download({f"https://drive.google.com/file/d/1Nyfy70k-_cYJhMRGjIXoVA_na2iTsOYK/view?usp=share_link"}, "kent_police.csv", quiet=False)
-df = pd.read_csv("kent_police.csv")
-df['Month'] = pd.to_datetime(df['Month'], errors='coerce')
-return df
+    url = "https://drive.google.com/uc?id=1Nfy7oK-_cYJhMRGjIXoVA_na2iTsOYK"
+    gdown.download(url, "kent_police.csv", quiet=False)
+    df = pd.read_csv("kent_police.csv")
+    df['Month'] = pd.to_datetime(df['Month'], errors='coerce')
+    return df
 
 df = load_data()
 
