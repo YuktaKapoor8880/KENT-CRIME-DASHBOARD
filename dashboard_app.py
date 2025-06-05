@@ -23,7 +23,7 @@ def load_data():
 gdown.download(f"https://drive.google.com/uc?id={file_id}", "kent_police.csv", quiet=False)
 df = pd.read_csv("kent_police.csv")
 df['Month'] = pd.to_datetime(df['Month'], errors='coerce')
-     return df
+return df
 
 df = load_data()
 
