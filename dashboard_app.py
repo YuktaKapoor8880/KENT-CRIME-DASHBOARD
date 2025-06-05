@@ -18,7 +18,6 @@ st.title("📊 Kent Police Predictive Crime Dashboard")
 # LOAD AND CLEAN DATA
 # -----------------------------------
 @st.cache_data
-def @st.cache_data
 def load_data():
     file_id = "1Nyfy70k-_cYJhMRGjIXoVA_na2iTsOYK"
     url = f"https://drive.google.com/uc?id={file_id}"
